@@ -18,10 +18,10 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     try {
-      const response = await axios.post('/submit-form', { name, email });
-      alert(response.data);
+      const response = await axios.post('/api/submit-form', { name, email }); // Cambié a '/api/submit-form'
+      alert(response.data); // Mostrar la respuesta del backend
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
       alert('Hubo un error al enviar el formulario.');
